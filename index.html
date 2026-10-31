@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project 120 Action Items · The Art of Deep Work</title>
+<meta name="description" content="Every action step from The Art of Deep Work, in one checklist. By KRY, 1% Academy.">
+<meta property="og:title" content="The Art of Deep Work · Project 120 Action Items">
+<meta property="og:description" content="Every action step from the course, in one checklist. By KRY, 1% Academy.">
+<link rel="icon" href="logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --paper:#f7f7f5; --ink:#141414; --ink-2:#4a4a48; --mute:#8a8a86; --rule:#e6e6e2; --line:#dcdcd7;
+  --y:#F2B91A; --g:#1FA463; --b:#2563EB; --r:#E6101E;
+  --y-ink:#B98700;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121212; --paper:#1b1b1a; --ink:#f3f3f1; --ink-2:#c4c4c0; --mute:#8d8d89; --rule:#2c2c2a; --line:#333331;
+    --y-ink:#F2B91A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121212; --paper:#1b1b1a; --ink:#f3f3f1; --ink-2:#c4c4c0; --mute:#8d8d89; --rule:#2c2c2a; --line:#333331;
+  --y-ink:#F2B91A;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%}
+
+.bar{display:grid;grid-template-columns:repeat(4,1fr);height:8px}
+.bar span:nth-child(1){background:var(--y)}.bar span:nth-child(2){background:var(--g)}
+.bar span:nth-child(3){background:var(--b)}.bar span:nth-child(4){background:var(--r)}
+
+.wrap{max-width:920px;margin:0 auto;padding:0 28px}
+
+/* ---------- Cover ---------- */
+.cover{padding-top:84px;padding-bottom:56px;position:relative}
+.brandline{display:flex;align-items:center;justify-content:space-between;margin-bottom:72px}
+.brandline .kry{font-weight:900;letter-spacing:.14em;font-size:15px}
+.brandline img{width:56px;height:56px}
+.title{margin:0;font-weight:900;font-size:clamp(54px,10vw,104px);line-height:.95;letter-spacing:-.035em}
+.title .t1{color:var(--y)}.title .t2{color:var(--g)}.title .t3{color:var(--b)}
+.title .dw{display:block;font-family:var(--serif);font-style:italic;font-weight:700;color:var(--r);letter-spacing:-.02em;font-size:1.12em;line-height:1.02;margin-top:.04em}
+.cover .bar{margin:44px 0 40px;max-width:420px;height:6px}
+.subtitle{margin:0;font-weight:800;font-size:clamp(28px,4.6vw,44px);letter-spacing:-.025em;line-height:1.1}
+.lede{margin:16px 0 0;max-width:58ch;color:var(--ink-2);font-size:18px}
+
+.meter{margin-top:52px;display:grid;grid-template-columns:auto 1fr;gap:10px 28px;align-items:end;padding:26px 28px;background:var(--paper);border-radius:6px}
+.meter .num{font-weight:900;font-size:56px;line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.meter .num small{font-size:22px;color:var(--mute);font-weight:700;letter-spacing:-.01em}
+.meter .lbl{color:var(--ink-2);font-size:15px;padding-bottom:6px}
+.track{grid-column:1/-1;height:10px;background:var(--rule);border-radius:10px;overflow:hidden;display:flex}
+.track i{display:block;height:100%;transition:width .5s cubic-bezier(.2,.7,.2,1);width:0}
+.track i:nth-child(1){background:var(--y)}.track i:nth-child(2){background:var(--g)}.track i:nth-child(3){background:var(--b)}.track i:nth-child(4){background:var(--r)}
+
+/* ---------- Contents strip ---------- */
+.toc{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:8px 0 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.toc a{display:block;padding:18px 14px 18px 16px;color:var(--ink);text-decoration:none;border-left:4px solid var(--c);font-size:14px;line-height:1.3}
+.toc a:hover{background:var(--paper)}
+.toc a b{display:block;font-weight:900;font-size:13px;color:var(--c-ink,var(--c));margin-bottom:4px;letter-spacing:.01em}
+.toc a:focus-visible{outline:3px solid var(--b);outline-offset:-3px}
+
+/* ---------- Chapter ---------- */
+.chapter{padding:96px 0 24px;border-bottom:1px solid var(--rule)}
+.ch-head{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end;margin-bottom:44px}
+.ch-num{font-weight:900;font-size:clamp(96px,16vw,168px);line-height:.78;letter-spacing:-.06em;color:var(--c)}
+.ch-kicker{font-weight:700;font-size:15px;color:var(--mute);margin:0 0 6px}
+.ch-title{margin:0;font-weight:900;font-size:clamp(34px,5.4vw,56px);line-height:1;letter-spacing:-.035em}
+.ch-meta{margin:12px 0 0;display:flex;align-items:center;gap:12px;color:var(--ink-2);font-size:15px}
+.ch-meta .pill{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-variant-numeric:tabular-nums}
+.ch-meta .dot{width:10px;height:10px;border-radius:50%;background:var(--c)}
+
+.part{margin:0 0 48px}
+.part > h3{margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.2;padding-left:18px;border-left:4px solid var(--c)}
+.part > .sub{margin:6px 0 0 22px;color:var(--ink-2);font-size:15.5px}
+.group{margin:28px 0 0}
+.group h4{margin:0 0 4px;font-size:17px;font-weight:800;letter-spacing:-.01em;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.group h4 .tag{font-size:13px;font-weight:700;color:var(--c-ink,var(--c));background:color-mix(in srgb,var(--c) 12%,transparent);padding:3px 10px;border-radius:999px;letter-spacing:.01em}
+
+ol.items{list-style:none;margin:10px 0 0;padding:0}
+ol.items li{border-top:1px solid var(--rule)}
+ol.items li:last-child{border-bottom:1px solid var(--rule)}
+.item{display:grid;grid-template-columns:28px 30px 1fr;gap:0 14px;align-items:start;padding:14px 6px 14px 4px;cursor:pointer;border-radius:4px}
+.item:hover{background:var(--paper)}
+.item input{position:absolute;opacity:0;pointer-events:none}
+.box{width:24px;height:24px;border:2px solid var(--c);border-radius:5px;margin-top:1px;display:grid;place-items:center;transition:background .18s}
+.box svg{width:14px;height:14px;stroke:#fff;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:22;stroke-dashoffset:22;transition:stroke-dashoffset .25s .05s}
+.n{font-weight:800;color:var(--c-ink,var(--c));font-variant-numeric:tabular-nums;font-size:16px;padding-top:1px}
+.txt{color:var(--ink);font-size:17px}
+.txt strong{font-weight:800}
+.item input:checked ~ .box{background:var(--c)}
+.item input:checked ~ .box svg{stroke-dashoffset:0}
+.item input:checked ~ .txt{color:var(--mute);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--c) 70%,transparent);text-decoration-thickness:2px}
+.item input:focus-visible ~ .box{outline:3px solid var(--b);outline-offset:3px}
+
+.none{margin:0 0 40px;padding:28px 30px;background:var(--paper);border-radius:6px;border-left:4px solid var(--c)}
+.none p{margin:0;font-size:18px;font-weight:600}
+.none span{display:block;margin-top:6px;color:var(--ink-2);font-size:15.5px;font-weight:400}
+.part .none{margin:20px 0 0}
+
+/* ---------- Notes ---------- */
+.notes{margin:8px 0 64px}
+.notes label{display:flex;align-items:baseline;justify-content:space-between;font-weight:800;font-size:17px;margin-bottom:10px}
+.notes label span{font-weight:500;font-size:13px;color:var(--mute)}
+.notes textarea{display:block;width:100%;min-height:260px;resize:vertical;border:0;border-top:3px solid var(--c);
+  background-color:var(--paper);
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 35px,var(--line) 35px,var(--line) 36px);
+  background-position:0 14px;background-attachment:local;
+  padding:14px 18px;font:500 17px/36px var(--sans);color:var(--ink);border-radius:0 0 6px 6px}
+.notes textarea:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 35%,transparent)}
+
+/* ---------- Footer ---------- */
+footer{padding-top:72px;padding-bottom:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .sig{display:flex;align-items:center;gap:16px}
+footer img{width:48px;height:48px}
+footer .sig b{display:block;font-weight:900;letter-spacing:.14em;font-size:14px}
+footer .sig span{color:var(--mute);font-size:14px}
+footer button{font:700 14px var(--sans);color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:10px 18px;cursor:pointer}
+footer button:hover{border-color:var(--ink-2);color:var(--ink)}
+footer button:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+
+.c-y{--c:var(--y);--c-ink:var(--y-ink)}.c-g{--c:var(--g)}.c-b{--c:var(--b)}.c-r{--c:var(--r)}
+
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .cover{padding-top:52px;padding-bottom:40px}.brandline{margin-bottom:48px}
+  .toc{grid-template-columns:1fr 1fr}
+  .toc a:last-child{grid-column:1/-1}
+  .ch-head{grid-template-columns:1fr;gap:6px}
+  .chapter{padding-top:72px}
+  .item{grid-template-columns:26px 24px 1fr;gap:0 10px}
+  .meter .num{font-size:44px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{
+  :root{--bg:#fff;--paper:#fff;--ink:#000}
+  .meter,footer button,.toc{display:none}
+  .chapter{break-before:page;padding-top:40px}
+  .item{padding:9px 0}
+  .notes textarea{min-height:420px;border:1px solid #ccc;border-top:3px solid var(--c)}
+}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<header class="wrap cover">
+  <div class="brandline">
+    <span class="kry">KRY</span>
+    <img src="logo.webp" alt="1% Academy">
+  </div>
+  <h1 class="title"><span class="t1">The</span> <span class="t2">Art</span> <span class="t3">of</span><span class="dw">Deep Work</span></h1>
+  <div class="bar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <p class="subtitle">Project 120 Action Items</p>
+  <p class="lede">Every action step taught in the course, in order. Check each one off as you complete it, and use the notes under every chapter to write down what you’re taking with you.</p>
+
+  <div class="meter" aria-live="polite">
+    <div class="num" id="done">0<small id="total"> / 0</small></div>
+    <div class="lbl" id="donelbl">action items completed</div>
+    <div class="track" id="track"><i></i><i></i><i></i><i></i></div>
+  </div>
+</header>
+
+<nav class="wrap" aria-label="Chapters">
+  <div class="toc" id="toc"></div>
+</nav>
+
+<main class="wrap" id="main"></main>
+
+<footer class="wrap">
+  <div class="sig">
+    <img src="logo.webp" alt="">
+    <div><b>KRY</b><span>1% Academy · Project 120</span></div>
+  </div>
+  <button type="button" id="reset">Clear checkmarks</button>
+</footer>
+<div class="bar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<script>
+const CH = [
+ {id:"the-deep-end", c:"y", title:"The Deep End", parts:[
+  {h:"Pick your philosophy", sub:"Find your monthly revenue. Do only the steps next to it.", groups:[
+   {h:"The Arithmetic Philosophy", tag:"$0–$20K/month", items:[
+    "Tonight, go to bed 30–60 minutes earlier than you normally do.",
+    "Tomorrow, wake up 30–60 minutes earlier.",
+    "Before anything else happens, do one deep work session. No phone. No email.",
+    "Once that wake-up time feels normal, slide your bedtime earlier again and make the session longer.",
+    "Keep going until you’re doing two 60-minute deep work sessions every morning."]},
+   {h:"The Monastic Philosophy", tag:"$20K–$30K/month, little or no team", items:[
+    "No communication or social media apps until the afternoon.",
+    "Analyze your finances.",
+    "List everything in your business and personal life that’s shallow or low-leverage.",
+    "Write down how many hours a week you give each one.",
+    "Outsource accordingly: an appointment setter for DMs, a chef or meal prep for food, a maid for cleaning."]},
+   {h:"The Bimodal Philosophy", tag:"$50K/month", items:[
+    "Open your calendar.",
+    "Choose one split. <strong>Weekly:</strong> certain days are deep work and the rest are open. <strong>Seasonal:</strong> long stretches locked in, then time off (for example, 3 months on and 6 weeks off).",
+    "Use a 70/30 ratio at best: 255 days a year dialed, the remaining 110 you do whatever you want.",
+    "Put the blocks on your calendar before this week ends."]},
+   {h:"The Journalistic Philosophy", tag:"$100K/month", items:[
+    "No schedule needed.",
+    "Rule: any time there’s an open gap, switch into deep work.",
+    "Treat it like eating. You do it when it’s needed."]}
+  ]},
+  {h:"Build your ritual", sub:"Everyone does all of these.", groups:[
+   {h:"Environment + time spent", tag:"30 days", items:[
+    "Pick 3–5 places to work: library, coffee shop, home office, quiet amenity room.",
+    "Rotate through them every week for 30 days.",
+    "After every session, write one line: where you worked and the quality of the work.",
+    "On day 30, keep your best three. That’s your ritual.",
+    "Standardize your session length for 2 weeks before increasing it. Deep work is a muscle."]},
+   {h:"Rules + process", tag:"4 weeks", items:[
+    "Before every session: phone in the other room, Opal block on, Rize running.",
+    "Weeks 1–2: run timed sessions on a deep work timer, and track your KPIs during every session.",
+    "Weeks 3–4: your average KPI from weeks 1–2 becomes the target for every session.",
+    "End of week 4: decide whether you’re a time-session guy or a KPI-session guy, and lock it in."]},
+   {h:"External support", tag:"Start today", items:[
+    "7–8 hours of sleep.",
+    "Whole foods diet.",
+    "Blood work optimized supplement stack.",
+    "Caffeine cycle, with no caffeine after 3 PM.",
+    "Blue light glasses."]},
+   {h:"The Grand Gesture", tag:"2–3 times per year", items:[
+    "Use it only 2–3 times a year, and only for major projects.",
+    "Put the next one on your calendar now."]}
+  ]},
+  {h:"Run 4DX", groups:[
+   {items:[
+    "Choose 1–2 10X output objectives that directly coordinate with your purpose.",
+    "Add timed or KPI-based lead measures to your Powerlist.",
+    "Set your Powerlist Completion Rate standard month to month."]}
+  ]}
+ ]},
+ {id:"down-time-mastery", c:"g", title:"Down Time Mastery", parts:[
+  {h:"The science of downtime", groups:[
+   {h:"Downtime aids insights", items:[
+    "Set a hard shutdown time. Step away from your desk and stop working at least 30–60 minutes before bed.",
+    "Schedule downtime to literally do nothing. It doesn’t need to be filled with consumption or social media."]},
+   {h:"Downtime recharges your energy for deep work", items:[
+    "Plan walks in quiet areas with nature between deep work sessions.",
+    "If you live downtown, use a treadmill, or put on noise-cancelling headphones and pace an empty street."]},
+   {h:"Evening downtime and the shutdown ritual", items:[
+    "Anything that isn’t deadline-heavy gets done the next day. Trust your plan for completion.",
+    "Plan ahead week to week and month to month so nothing becomes deadline-heavy.",
+    "Run PTT (Plan Tomorrow, Today): take 10–15 minutes every night to plan tomorrow’s quantitative deep work tasks."]}
+  ]},
+  {h:"Reverse Priority Philosophy", groups:[
+   {items:["Plan three to five 5–10 minute internet blocks a day for texts, emails and social media, outside your deep work."]}
+  ]},
+  {h:"Reverse Priority Framework", groups:[
+   {items:[
+    "<strong>9-5 hacking:</strong> if your job keeps you online, make your internet blocks more frequent.",
+    "<strong>Stick to the plan:</strong> when you think you need the internet mid-session, switch tasks until your next block.",
+    "<strong>After-work auditing:</strong> keep scheduling internet use after work. Resist the phone in the bathroom, in traffic and in group settings."]}
+  ]},
+  {h:"Productive meditation", groups:[
+   {items:[
+    "While walking or working out, pick one business problem and keep your mind on it.",
+    "When your attention slips, note it and redirect back to the problem.",
+    "Watch for looping, where you repeat the same thought instead of going deeper.",
+    "Structure your thinking: review the problem, store the variables, identify and tackle the next step."]}
+  ]}
+ ]},
+ {id:"40k-os", c:"b", title:"$40K/M OS", parts:[
+  {h:"KRY’s internal and external audit for productivity", groups:[
+   {items:[
+    "Install Opal and block distracting apps during deep work, on your phone.",
+    "Install Rize and block distractions on your desktop. Track where your desktop time actually goes.",
+    "Get a deep work timer for timed sessions.",
+    "Get ear muffs or noise-cancelling headphones. A pair costs about $20."]}
+  ]}
+ ]},
+ {id:"high-quality-work", c:"r", title:"High Quality Work", parts:[
+  {h:"Intensity of Focus", groups:[
+   {items:[
+    "Identify and eliminate your digital distractions: social media, non-essential messages, YouTube.",
+    "Identify and eliminate your physical distractions: unproductive weekends (28.5% of your year) and late mornings.",
+    "Close loops. Finish one task before starting another to avoid attention residue.",
+    "Define your deep work: the 1–2 highest-leverage tasks that, done every day, directly correlate with your income. It’s usually the task you procrastinate on most.",
+    "Move shallow work (email, meetings, social media) out of your deep work sessions.",
+    "Track your deep work hours. Aim for 1 hour a day minimum (30% dweeb) and 4+ hours a day (maniac).",
+    "Treat weekends like your 9-to-5 for deep work."]}
+  ]},
+  {h:"Why You Must Get Rich", none:"No action items in this section."}
+ ]},
+ {id:"premium-accountability", c:"y", title:"Premium Accountability", none:"No action items in this chapter."}
+];
+
+const KEY="p120-deep-work-v1";
+let state={checks:{},notes:{}};
+try{const s=localStorage.getItem(KEY); if(s) state=Object.assign(state,JSON.parse(s));}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+
+const tick='<svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>';
+const main=document.getElementById('main'), toc=document.getElementById('toc');
+const counts=[];
+CH.forEach((ch,ci)=>{
+  const n=ci+1, cls='c-'+ch.c;
+  toc.insertAdjacentHTML('beforeend',`<a class="${cls}" href="#${ch.id}"><b>Chapter ${n}</b>${ch.title}</a>`);
+  let total=0, html='';
+  if(ch.none){
+    html+=`<div class="none"><p>${ch.none}</p></div>`;
+  }else{
+    ch.parts.forEach((p,pi)=>{
+      html+=`<section class="part"><h3>${p.h}</h3>${p.sub?`<p class="sub">${p.sub}</p>`:''}`;
+      if(p.none){html+=`<div class="none"><p>${p.none}</p></div>`;}
+      (p.groups||[]).forEach((g,gi)=>{
+        html+=`<div class="group">${g.h?`<h4>${g.h}${g.tag?`<span class="tag">${g.tag}</span>`:''}</h4>`:''}<ol class="items">`;
+        g.items.forEach((t,ti)=>{
+          const id=`c${n}-${pi}-${gi}-${ti}`; total++;
+          html+=`<li><label class="item" for="${id}"><input type="checkbox" id="${id}" data-ch="${ci}"${state.checks[id]?' checked':''}><span class="box">${tick}</span><span class="n">${ti+1}</span><span class="txt">${t}</span></label></li>`;
+        });
+        html+='</ol></div>';
+      });
+      html+='</section>';
+    });
+  }
+  counts.push(total);
+  const meta= total?`<p class="ch-meta"><span class="pill"><span class="dot"></span><span id="cc${ci}">0</span> of ${total} complete</span></p>`:'';
+  main.insertAdjacentHTML('beforeend',`
+  <article class="chapter ${cls}" id="${ch.id}">
+    <div class="ch-head">
+      <div class="ch-num" aria-hidden="true">${n}</div>
+      <div><p class="ch-kicker">Chapter ${n}</p><h2 class="ch-title">${ch.title}</h2>${meta}</div>
+    </div>
+    ${html}
+    <div class="notes">
+      <label for="notes-${ci}">Notes <span id="ns-${ci}"></span></label>
+      <textarea id="notes-${ci}" data-ch="${ci}" placeholder="Write what you’re taking from this chapter…"></textarea>
+    </div>
+  </article>`);
+  const ta=document.getElementById('notes-'+ci); ta.value=state.notes[ci]||'';
+});
+
+const GRAND=counts.reduce((a,b)=>a+b,0);
+document.getElementById('total').textContent=' / '+GRAND;
+function refresh(){
+  let done=0; const per=CH.map(()=>0);
+  document.querySelectorAll('.item input').forEach(i=>{if(i.checked){done++;per[+i.dataset.ch]++;}});
+  per.forEach((v,ci)=>{const el=document.getElementById('cc'+ci); if(el) el.textContent=v;});
+  document.getElementById('done').firstChild.nodeValue=done;
+  document.getElementById('donelbl').textContent = done===GRAND ? 'Every action item complete.' : 'action items completed';
+  // four-colour progress: fill segments in brand order
+  const pct=done/GRAND*100, bars=document.querySelectorAll('#track i');
+  bars.forEach((b,k)=>{const lo=k*25, w=Math.max(0,Math.min(25,pct-lo)); b.style.width=w+'%';});
+}
+main.addEventListener('change',e=>{
+  if(e.target.matches('.item input')){state.checks[e.target.id]=e.target.checked; if(!e.target.checked) delete state.checks[e.target.id]; save(); refresh();}
+});
+let t;
+main.addEventListener('input',e=>{
+  if(e.target.matches('textarea')){
+    state.notes[e.target.dataset.ch]=e.target.value;
+    const s=document.getElementById('ns-'+e.target.dataset.ch); s.textContent='Saving…';
+    clearTimeout(t); t=setTimeout(()=>{save(); s.textContent='Saved on this device';},400);
+  }
+});
+document.getElementById('reset').addEventListener('click',()=>{
+  if(!confirm('Clear every checkmark? Your notes stay.')) return;
+  state.checks={}; save();
+  document.querySelectorAll('.item input').forEach(i=>i.checked=false); refresh();
+});
+refresh();
+</script>
+</body>
+</html>
